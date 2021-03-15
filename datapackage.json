@@ -1,0 +1,397 @@
+{
+  "name": "metzyme-v1",
+  "profile": "data-package",
+  "title": "METYZME Global Proteomics Dataset for expedition KM1128",
+  "description": "Global metaproteomic dataset for KM1128 the METZYME expedition. Size fractionated samples collected by McLane pump filters (filter size 0.2 – 3.0 micron). The global proteome dataset presented here included 16951 protein identifications and 31994 unique peptide identifications (Table S1) compiled from 37 samples and 74 raw files (CID and HCD modes for each file) and ### total spectra.",
+  "homepage": "https://www.bco-dmo.org/project/2236",
+  "version": "0.1.0",
+  "opp:shortName": "METZYME",
+  "licenses": [
+    {
+      "type": "CC-BY-4.0",
+      "web": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Makoto Saito",
+      "email": "msaito@whoi.edu",
+      "uri": "http://lod.bco-dmo.org/id/person/50985",
+      "orcid": "0000-0001-6040-9295",
+      "role": "author"
+    },
+    {
+      "title": "BCO-DMO",
+      "email": "info@bco-dmo.org",
+      "uri": "http://lod.bco-dmo.org/id/affiliation/191",
+      "role": "publisher"
+    }
+  ],
+  "keywords": [
+    "METZYME",
+    "proteomics",
+    "Thermo Vantage mass spectrometer",
+    "Mass Spectrometer",
+    "McLane Pumps WTS-LV",
+    "Large Volume Pumping System-WTS-LV"
+  ],
+  "odo:hasDeployment": [
+    {
+      "name": "KM1128",
+      "uri": "http://lod.bco-dmo.org/id/deployment/59053"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "path": "data/v3/MetZyme_proteins.csv",
+      "name": "metzyme-v1-proteins",
+      "odo-dt:dataType": {
+        "@id": "http://ocean-data.org/schema/data-type/v1.0/ProteinSpectralCounts"
+      },
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "cruise",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/CruiseIdentifier"
+          },
+          {
+            "name": "scaffold_id",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/SampleIdentifier"
+          },
+          {
+            "name": "ORF_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Molecular_Weight",
+            "type": "integer",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MolecularWeightInDaltons"
+          },
+          {
+            "name": "best_hit_annotation",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/IdentifiedProductName"
+          },
+          {
+            "name": "best_hit_species",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/BestNCBITaxonName"
+          },
+          {
+            "name": "best_hit_taxon_id",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/BestNCBITaxonIdentifier"
+          },
+          {
+            "name": "KO",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/KeggIdentifier",
+            "http://ocean-data.org/schema/data-type/v1.0/delimiter": "||"
+          },
+          {
+            "name": "KO_link",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "KO_desc",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/KeggName"
+          },
+          {
+            "name": "KO_pathway",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/KeggDescription",
+            "http://ocean-data.org/schema/data-type/v1.0/delimiter": " || "
+          },
+          {
+            "name": "EC",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/EnzymeCommissionIdentifier"
+          },
+          {
+            "name": "uniprot",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/UniprotIdentifier",
+            "http://ocean-data.org/schema/data-type/v1.0/delimiter": "||"
+          },
+          {
+            "name": "PFams",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PFamsIdentifier",
+            "http://ocean-data.org/schema/data-type/v1.0/delimiter": "||"
+          },
+          {
+            "name": "PFams_desc",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PFamsDescription",
+            "http://ocean-data.org/schema/data-type/v1.0/delimiter": "||"
+          },
+          {
+            "name": "mclane_cast",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "mclane_time_local",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/ISODateTimeUTC"
+          },
+          {
+            "name": "lat",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/LatitudeDecimalDegrees"
+          },
+          {
+            "name": "lon",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/LongitudeDecimalDegrees"
+          },
+          {
+            "name": "station",
+            "type": "string",
+            "format": "default",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/CruiseStationIdentifier"
+          },
+          {
+            "name": "depth",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/DepthMeters"
+          },
+          {
+            "name": "min_filter_size",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MinFilterSizeInMicrons"
+          },
+          {
+            "name": "max_filter_size",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MaxFilterSizeInMicrons"
+          },
+          {
+            "name": "spectral_count",
+            "type": "number",
+            "format": "default",
+            "decimalChar": ".",
+            "rdfType": "http://ocean-data.org/schema/data-type/v1.0/SpectralCount"
+          }
+        ],
+        "missingValues": [
+            "nd","NA"
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "path": "data/v1/Metzyme_Fusion_AllStations_precursors.fasta",
+      "name": "metzyme-v1-fasta",
+      "encoding": "utf-8",
+      "format": "fasta",
+      "mediatype": "text/fasta",
+      "odo-dt:dataType": {
+        "@id": "http://ocean-data.org/schema/data-type/v1.0/FASTA-ProteinIdentifications"
+      }
+    },
+    {
+      "profile": "tabular-data-resource",
+      "path": "data/v2/metzyme_V1_peptides.csv",
+      "name": "metzyme-v1-peptides",
+      "odo-dt:dataType": {
+        "@id": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts"
+      },
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+              "name": "cruise",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/CruiseIdentifier"
+          },
+          {
+              "name": "station",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/CruiseStationIdentifier"
+          },
+          {
+              "name": "depth",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/DepthMeters"
+          },
+          {
+              "name": "MS_MS_sample_name",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_MS-MS_SampleName"
+          },
+          {
+              "name": "lat",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/LatitudeDecimalDegrees"
+          },
+          {
+              "name": "lon",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/LongitudeDecimalDegrees"
+          },
+          {
+              "name": "time_local",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/ISODateTimeUTC"
+          },
+          {
+              "name": "min_filter_size",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MinFilterSizeInMicrons"
+          },
+          {
+              "name": "max_filter_size",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MaxFilterSizeInMicrons"
+          },
+          {
+              "name": "protein_ID_num",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_ProteinIdentifier"
+          },
+          {
+              "name": "protein_accession_num",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_ProteinAccessionIdentifiers",
+              "http://ocean-data.org/schema/data-type/v1.0/delimiter": ","
+          },
+          {
+              "name": "protein_molecular_weight",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/MolecularWeightInDaltons"
+          },
+          {
+              "name": "peptide_sequence",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/GeneticSequenceIdentifier"
+          },
+          {
+              "name": "best_peptide_identification_probability",
+              "type": "string",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_BestIdProbability"
+          },
+          {
+              "name": "best_SEQUEST_Xcorr_score",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_BestSequestXCorrScore"
+          },
+          {
+              "name": "best_SEQUEST_DCn_score",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_BestSequestDCnScore"
+          },
+          {
+              "name": "number_of_identified_pos2H_spectra",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_Plus2HSpectraCount"
+          },
+          {
+              "name": "number_of_identified_pos3H_spectra",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_Plus3HSpectraCount"
+          },
+          {
+              "name": "number_of_identified_pos4H_spectra",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_Plus4HSpectraCount"
+          },
+          {
+              "name": "sum_spectral_counts",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_SpectralCountSummation"
+          },
+          {
+              "name": "median_retention_time",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_MedianRetentionTime"
+          },
+          {
+              "name": "total_precursor_intensity",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_TotalPrecursorIntensity"
+          },
+          {
+              "name": "total_TIC",
+              "type": "number",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_TotalTIC"
+          },
+          {
+              "name": "peptide_start_index",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_StartIndex"
+          },
+          {
+              "name": "peptide_stop_index",
+              "type": "integer",
+              "format": "default",
+              "rdfType": "http://ocean-data.org/schema/data-type/v1.0/PeptideSpectralCounts_StopIndex"
+          }
+        ],
+        "missingValues": [
+            ""
+        ]
+      }
+    }
+  ]
+}
